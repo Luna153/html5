@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+    <link rel="stylesheet" href="0_style.css">
+    <script src="./8_arc.js"></script>
+    <style>
+        p{
+            font:bold 50px Tahoma;
+            /* 加陰影 */
+            /* text-shadow: red 5px 5px 5px; */
+
+            color: #fff;
+            /* 四邊都有陰影 */
+            /* text-shadow: red 0px 0px 15px; */
+
+            /* 多重陰影 */
+            /* 重疊顏色順序和 canvas 顏色相反 */
+            text-shadow: red 5px 5px 10px, blue 5px 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p>yellow</p> -->
+    <canvas id="canvas" width="1000" height="1200">
+    </canvas>
+</body>
+</html>
