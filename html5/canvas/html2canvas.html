@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html2canvas</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        #capture {
+            padding: 10px;
+            background: #f5da55;
+            width: 250px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="capture">
+        <h3 style="color: #000; ">Hello world!</h3>
+        <img src="../../images/Shinnosuke/Shinnosuke2.png" alt="">
+    </div>
+    <hr>
+    <script>
+        // 引用 canvas 套件 , 把 css/html 轉成圖檔
+        html2canvas(document.querySelector("#capture")).then(canvas => {
+            document.body.appendChild(canvas)
+        });
+
+        // 物件.then(function(){})
+        // 物件.then(()=>{})
+    </script>
+</body>
+
+</html>

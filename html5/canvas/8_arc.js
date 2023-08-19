@@ -43,13 +43,22 @@ function doFirst() {
     context.strokeStyle = 'red';
     context.lineWidth = 5;
 
+    let radius = 150
+
+    context.translate(250, 200);
+    //從此之後 (250, 200) --> (0, 0)
+    
+
     context.arc(250, 200, 150, 0, Math.PI, false);
     context.stroke();
 
     //左下
+    context.translate(250, 200);
     context.beginPath();
-    context.arc(250, 600, 150, 0, 2 * Math.PI);
+    context.arc(0, 0, radius, 0, 2 * Math.PI);
     context.stroke();
+
+    context.translate(-250, -600);
 
 }
 

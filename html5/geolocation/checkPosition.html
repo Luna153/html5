@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Position</title>
+</head>
+
+<body>
+    <div id="position">
+
+    </div>
+    <script>
+        function doFirst() {
+            navigator.geolocation.getCurrentPosition(succCallback)
+        }
+        function succCallback(e) {
+            //緯度經度準確度
+            let accuracy = e.coords.accuracy
+
+            if (accuracy < 15000) {
+                document.getElementById("position").innerHTML = `
+            緯度: ${e.coords.latitude} <br>
+            經度: ${e.coords.longitude} <br>
+            準確度: ${e.coords.accuracy} <br>
+            `
+            } else {
+                document.getElementById("position").innerHTML = `超過偵測範圍 `
+            }
+
+        }
+        window.addEventListener('load', doFirst)
+    </script>
+</body>
+
+</html>

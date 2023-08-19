@@ -40,8 +40,8 @@ function doFirst() {
 
         // 地板
         context.beginPath();
-        context.moveTo(25, 350);
-        context.lineTo(375, 350);
+        context.moveTo(0, 350);
+        context.lineTo(400, 350);
         context.strokeStyle = 'rgb(0,0,0)';
         context.lineWidth = 2;
         context.stroke();
