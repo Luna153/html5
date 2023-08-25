@@ -1,0 +1,14 @@
+let today = new Date()
+
+let temp = new Math()      // XX -> Math 不可以 new
+--------------------------------
+const temp = 5  // const 不能被 reassigned
+temp = 10  // X
+
+const house = {
+    table:　2, 
+    chair: 10,
+}
+
+house = 'ABC'           // X (因為型態被改變)
+house.table = 5         // OK (物件內容可以改變)

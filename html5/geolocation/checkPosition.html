@@ -13,8 +13,14 @@
     </div>
     <script>
         function doFirst() {
-            navigator.geolocation.getCurrentPosition(succCallback)
+            navigator.geolocation.getCurrentPosition(succCallback, errorCallback, {
+                enableHighAccuracy: false,
+                timeout: 1000,
+                //timeout單位:毫秒 太少來不及跑
+                maximumAge: 0
+            })
         }
+        //可以放三個參數
         function succCallback(e) {
             //緯度經度準確度
             let accuracy = e.coords.accuracy
@@ -29,6 +35,9 @@
                 document.getElementById("position").innerHTML = `超過偵測範圍 `
             }
 
+        }
+        function errorCallback(e){
+            
         }
         window.addEventListener('load', doFirst)
     </script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Google Map Javascript API</title>
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg"></script>
+    <!-- 可以貼在網址上 確認是否為函式庫 -->
+
+</head>
+
+<body>
+    <div id="map" style="width:800px;height: 600px;"></div>
+
+    <script>
+        function doFirst() {
+            let area = document.getElementById("map")
+            let position = new google.maps.LatLng(24.981235, 121.2282846)
+            let options = {
+                zoom: 14,
+                center: position,
+                mapTyprId: google.maps.MapTypeId.ROADMAP,
+            }
+            let map = new google.maps.Map(area, options)
+
+            let marker = new google.maps.Marker({
+                map,    //map: map,
+                postion,  //position: position
+                // title: '這裡是哪裡',
+                // icon: '../../images/foot.gif'
+            })
+            marker.setTitle('這裡是哪裡')
+            marker.setIcon('../../images/number/dgtp.gif')
+        }
+        window.addEventListener('load', doFirst)
+    </script>
+</body>
+
+</html>
+
+controls
+layers
+services
